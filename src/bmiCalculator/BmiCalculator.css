@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    padding: 30px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border: none;
+    background-image: url('./images/e.jpg');
+    background-size: cover;
+    margin-top: auto;
+    padding-bottom: 40px;
+}
+.gender{
+    margin-top: px;
+    font-size: 24px;
+    
+}
+.header{
+    font-size: 32px;
+    font-family: serif;
+    margin-bottom: 40px;
+}
+.input-title{
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.input-val{
+    width: 20%;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+#bmi-val{
+    font-size: 35px;
+    margin-top: 5px;
+    color: black;
+}
+.comment{
+    font-size: 20px;
+}
+
+.btn{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 22px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    
+}
+.btn:hover{
+    background-color: rgb(77, 77, 77);
+}
