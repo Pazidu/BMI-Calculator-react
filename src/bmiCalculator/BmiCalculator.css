@@ -1,14 +1,30 @@
 *{
     box-sizing: border-box;
 }
+#mainPage{
+    /* background-image: url('./images/e.jpg'); */
+    background-size: cover;
+    background-color: aliceblue;
+}
+#off{
+    display: none;
+}
+#on{
+    display: block;
+}
+.darkMode{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 32px;
+    display: flex;
+}
 .container{
     padding: 30px;
     width: 100%;
     height: auto;
     text-align: center;
     border: none;
-    background-image: url('./images/e.jpg');
-    background-size: cover;
     margin-top: auto;
     padding-bottom: 40px;
 }

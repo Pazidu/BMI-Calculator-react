@@ -1,5 +1,7 @@
 import React from "react";
 import "./BmiCalculator.css";
+import LightbulbIcon from "@mui/icons-material/Lightbulb";
+import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
 
 export default function BmiCalculator() {
   function MIDIInput() {
@@ -159,38 +161,66 @@ export default function BmiCalculator() {
       }
     }
   }
+
+  function dMode(){
+    document.getElementById('on').style.display = 'none';
+    document.getElementById('off').style.display = 'block';
+    document.body.style.color = "white";
+    // document.getElementById("mainPage").style.backgroundImage = "url('./images/e.jpg')";
+    document.getElementById('mainPage').style.backgroundColor = "black";
+    document.getElementById('bmi-val').style.color = "white";
+    document.getElementById('btn').style.backgroundColor = "white";
+    document.getElementById('btn').style.color = "black";
+    
+  
+  }
+  function lMode(){
+    document.getElementById('off').style.display = 'none';
+    document.getElementById('on').style.display = 'block';
+    document.body.style.color = "black";
+    document.getElementById('mainPage').style.backgroundColor = "white";
+    document.getElementById('bmi-val').style.color = "black";
+    document.getElementById('btn').style.backgroundColor = "black";
+    document.getElementById('btn').style.color = "white";
+  }
   return (
-    <div className="container">
-      <h2 className="header">BMI Calculator</h2>
-      <div className="age">
-        <p className="input-title">Your Age</p>
-        <input type="text" id="input-age" className="input-val" required />
+    <div id="mainPage" className="mainPage">
+      <div className="darkMode" id="darkMode">
+        <div id="off" onClick={lMode}><LightbulbIcon/></div>
+        <div id="on" onClick={dMode}><LightbulbOutlinedIcon/></div>
       </div>
-      <div className="gender">
-        <input type="radio" id="male" name="choice" value="male" />
-        <label for="male">Male </label>
-        <input type="radio" id="female" name="choice" value="female" />
-        <label for="female">Female</label>
-      </div>
-      <div className="height">
-        <p className="input-title">Your height (in m)</p>
-        <input type="text" id="input-h" className="input-val" required />
-      </div>
-      <div className="weight">
-        <p className="input-title">Your Weight (in kg)</p>
-        <input type="text" id="input-w" className="input-val" required />
-      </div>
-      <div className="submit">
-        <button type="button" onClick={MIDIInput} className="btn">
-          Submit
-        </button>
-      </div>
-      <div className="result">
-        <p className="input-title">Your MBI value</p>
-        <p id="bmi-val">0</p>
-        <p id="comment" className="comment">
-          Suggesions
-        </p>
+      <div className="container">
+        <h2 className="header">BMI Calculator</h2>
+        <div className="age">
+          <p className="input-title">Your Age</p>
+          <input type="text" id="input-age" className="input-val" required />
+        </div>
+        <div className="gender">
+          <input type="radio" id="male" name="choice" value="male" />
+          <label for="male">Male </label>
+          <input type="radio" id="female" name="choice" value="female" />
+          <label for="female">Female</label>
+        </div>
+        <div className="height">
+          <p className="input-title">Your height (in m)</p>
+          <input type="text" id="input-h" className="input-val" required />
+        </div>
+        <div className="weight">
+          <p className="input-title">Your Weight (in kg)</p>
+          <input type="text" id="input-w" className="input-val" required />
+        </div>
+        <div className="submit">
+          <button type="button" onClick={MIDIInput} className="btn" id="btn">
+            Submit
+          </button>
+        </div>
+        <div className="result">
+          <p className="input-title">Your MBI value</p>
+          <p id="bmi-val">0</p>
+          <p id="comment" className="comment">
+            Suggesions
+          </p>
+        </div>
       </div>
     </div>
   );
