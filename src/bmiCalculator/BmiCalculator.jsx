@@ -11,7 +11,7 @@ export default function BmiCalculator() {
     }
     let getHeight = parseFloat(document.getElementById("input-h").value);
     let getWeight = parseFloat(document.getElementById("input-w").value);
-    let BMIValue = getWeight / (getHeight * getHeight);
+    let BMIValue = ((getWeight / (getHeight * getHeight)).toFixed(2));
     document.getElementById("bmi-val").innerHTML = BMIValue;
 
     const selectedRadio = document.querySelector(
